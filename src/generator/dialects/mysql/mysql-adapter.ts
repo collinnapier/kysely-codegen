@@ -76,7 +76,7 @@ export class MysqlAdapter extends Adapter {
     time: new IdentifierNode('string'),
     timestamp: new IdentifierNode('Date'),
     tinyblob: new IdentifierNode('Buffer'),
-    tinyint: new IdentifierNode('number'),
+    tinyint: new IdentifierNode('boolean'),
     tinytext: new IdentifierNode('string'),
     varbinary: new IdentifierNode('Buffer'),
     varchar: new IdentifierNode('string'),

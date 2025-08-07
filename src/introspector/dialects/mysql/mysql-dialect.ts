@@ -12,6 +12,13 @@ export class MysqlIntrospectorDialect extends IntrospectorDialect {
     return new KyselyMysqlDialect({
       pool: createPool({
         uri: options.connectionString,
+        typeCast(field, next) {
+          if (field.type === 'TINY' && field.length === 1) {
+            return field.string() === '1';
+          } else {
+            return next();
+          }
+        },
       }),
     });
   }
