@@ -15,9 +15,8 @@ export class MysqlIntrospectorDialect extends IntrospectorDialect {
         typeCast(field, next) {
           if (field.type === 'TINY' && field.length === 1) {
             return field.string() === '1';
-          } else {
-            return next();
           }
+          return next();
         },
       }),
     });
