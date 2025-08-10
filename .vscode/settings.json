@@ -15,5 +15,6 @@
   "files.encoding": "utf8",
   "files.eol": "\n",
   "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "postman.settings.dotenv-detection-notification-visibility": false
 }
